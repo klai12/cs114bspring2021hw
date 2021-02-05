@@ -43,31 +43,27 @@ fast couple shoot fly\\
 \noindent Note: \textbf{Show your work!} In particular, show all of the probability distributions involved in the model (namely, $P(\mathrm{class})$ and $P(\mathrm{feature|class})$) and all of the steps used to calculate them. It is recommended that you create (conditional) probability tables such as those shown below.\newpage
 
 \begin{center}
-\begin{tabular}{|c|c|c|}
+\begin{tabular}{|c|c|}
 \hline 
- & \multicolumn{2}{|c|}{class} \\ 
-\cline{2-3}
- & comedy & action \\ 
+class & $P(\mathrm{class})$ \\ 
 \hline 
-$P(\mathrm{class})$ &  &  \\ 
-\hline
+action &  \\ 
+\hline 
+comedy &  \\ 
+\hline 
 \end{tabular} 
 \end{center}
 
 \begin{center}
-\begin{tabular}{|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|c|c|}
 \hline 
-\multicolumn{2}{|c|}{\multirow{2}{*}{$P(\mathrm{feature|class})$}} & \multicolumn{2}{|c|}{class} \\ 
-\cline{3-4}
-\multicolumn{2}{|c|}{} & comedy & action \\ 
+\multicolumn{2}{|c|}{\multirow{2}{*}{$P(\mathrm{feature|class})$}} & \multicolumn{4}{|c|}{feature} \\ 
+\cline{3-6}
+\multicolumn{2}{|c|}{} & fast & couple & shoot & fly \\ 
 \hline 
-\multirow{4}{*}{feature} & fast &  &  \\ 
-\cline{2-4}
-& couple &  &  \\ 
-\cline{2-4}
-& shoot &  &  \\ 
-\cline{2-4}
-& fly &  &  \\ 
+\multirow{2}{*}{class} & action &  &  &  & \\ 
+\cline{2-6}
+& comedy &  &  &  & \\ 
 \hline
 \end{tabular} 
 \end{center}
