@@ -153,14 +153,14 @@ if __name__ == "__main__":
     model = ParserModel(embeddings)
 
     def check_embedding():
-        inds = np.random.randint(0, 100, (4, 36), dtype=np.int32)
+        inds = torch.randint(0, 100, (4, 36), dtype=torch.long)
         selected = model.embedding_lookup(inds)
-        assert np.all(selected == 0), "The result of embedding lookup: " \
+        assert np.all(selected.data.numpy() == 0), "The result of embedding lookup: " \
                                       + repr(selected) + " contains non-zero elements."
 
     def check_forward():
-        inputs = np.random.randint(0, 100, (4, 36), dtype=np.int32)
-        out = model.forward(inputs)[-1]
+        inputs = torch.randint(0, 100, (4, 36), dtype=torch.long)
+        out = model(inputs)
         expected_out_shape = (4, 3)
         assert out.shape == expected_out_shape, "The result shape of forward is: " + repr(out.shape) + \
                                                 " which doesn't match expected " + repr(expected_out_shape)
